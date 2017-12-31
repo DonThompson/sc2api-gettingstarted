@@ -1,13 +1,13 @@
 # sc2api-gettingstarted
 
 ## Purpose
-This guide & sample code will walk you through 
+This guide & sample code will walk you through getting everything you need to build your own sc2 bot using the Blizzard API, run that bot against local in-game Starcraft 2 AIs, and finally run that bot against other bots using the www.sc2ai.net ladder manager locally.
 
 ## Assumptions
-* Git knowledge (forks, clone, git shell, etc)
-* Windows
-* You are using VS 2017
-* Reasonable understanding of C++ and project configuration (includes, libs mostly)
+* You have a basic knowledge of Git (fork, clone, git shell, etc)
+* You are using Windows.
+* You are using Visual Studio 2017
+* You have a reasonable understanding of C++ and project configuration (includes, libs mostly)
 
 ## Caveats
 * Release mode only for now (TODO:  Figure out debug)
@@ -15,14 +15,14 @@ This guide & sample code will walk you through
 # Work...
 
 ## Choose a starting location
-* Everything we do will live under this folder.  As an example we'll use 'sc2api'.  Feel free to change this to wherever you want it.
-* Open up git shell, we'll do all work from there
+* Everything we do will live under this folder.  As an example we'll use 'c:\sc2api\'.  Feel free to change this to wherever you want it.
+* Open up Git Shell, we'll do all work from there
 ```
 mkdir c:\sc2api
 cd c:\sc2api
 ```
 
-## Fork this repo
+## Clone this repo
 * Open up git shell
 * Clone to your PC
 ```
@@ -32,6 +32,9 @@ git clone https://github.com/DonThompson/sc2api-gettingstarted
 ## Prep folders
 ```
 mkdir sc2api
+mkdir LadderServer
+mkdir LadderServer\Bots
+mkdir LadderServer\Replays
 ```
 
 ## Get & build the Starcraft 2 API from Blizzard
@@ -48,14 +51,38 @@ cmake ../ -G "Visual Studio 15 2017 Win64"
 * Open Visual Studio 2017, browse to C:\sc2api\s2client-api\build\ and open s2client-api.sln
 * Set your configuration to "Release" and "x64" via Build->Configuration Manager or in your toolbar
 * Choose Build -> Rebuild Solution
-
 * TODO:  Only building release mode right now. If we want to debug later, we might want more built.
-
-
 * Once complete, we want to grab the output
 ```
 cd ..
 .\synchproject.bat --If asked to overwrite, choose All
 copy-item project/include/ ../sc2api/include/ -recurse
 copy-item project/lib/ ../sc2api/lib/ -recurse
+cd ..
 ```
+
+* You have now built the sc2 api libraries we'll use to build everything else.  We have house them in a central location @ C:\sc2api\sc2api\ that everyone else can reference.
+
+## Get the sc2ai.net Ladder Manager
+* Note:  Currently using the dllinterface branch, not master
+```
+git clone https://github.com/Cryptyc/Sc2LadderServer/tree/DLLInterface
+```
+* Now build it in release mode
+* TODO:  cmd line this?
+* Open Visual Studio 2017, browse to C:\sc2api\Sc2LadderServer\ and open LadderManager.vcxproj
+* Set your configuration to "Release" and "x64" via Build->Configuration Manager or in your toolbar
+* Right click on the project (not solution) and go to Properties.  Make sure you're looking at Release / x64.
+* Under C/C++, look for "Additional Include Directories".  Add `../sc2api/include;curl/include;` to the existing list
+* Under Linker, look for "Additional Library Dependencies".  Add `../sc2api/lib` to the existing list
+* Choose Build -> Rebuild Solution
+* TODO:  Only building release mode right now. If we want to debug later, we might want more built.
+* Once complete, we want to grab the output
+```
+copy-item .\Sc2LadderServer\x64\Release\LadderManager.exe LadderServer
+copy-item .\Sc2LadderServer\curl\bin\libcurl.dll LadderServer
+```
+
+TODO:  need a .conf file
+TODO:  need bots
+TODO:  Probably move this down?  Might be simplest to get you going 1vai before other bots
