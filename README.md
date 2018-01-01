@@ -66,6 +66,7 @@ cd ..
 
 ## Get the sc2ai.net Ladder Manager
 * Note:  Currently using the dllinterface branch, not master
+* TODO:  Probably move this down?  Might be simplest to get you going 1vai before other bots
 ```
 git clone https://github.com/Cryptyc/Sc2LadderServer -b DLLInterface
 ```
@@ -84,12 +85,11 @@ copy-item .\Sc2LadderServer\x64\Release\LadderManager.exe LadderServer
 copy-item .\Sc2LadderServer\curl\bin\libcurl.dll LadderServer
 copy-item .\sc2api-gettingstarted\LadderManagerConfig\* LadderServer -recurse
 ```
-
-TODO:  Probably move this down?  Might be simplest to get you going 1vai before other bots
-TODO:  need bots @ http://sc2ai.net/Season3Bots.zip
-TODO:  need maps @ https://github.com/Blizzard/s2client-proto#downloads
-TODO:  Maps path is hardcoded to c:\sc2api\
-TODO:  Test if LadderManager.exe can take relative paths.  Would make things simpler.  Make PR if not.
+* TODO:  Maps path is hardcoded to c:\sc2api\
+* Grab the latest bots from sc2ai.net:   http://sc2ai.net/Season3Bots.zip
+* Unzip these into C:\sc2api\LadderServer\Bots
+* TODO:  Should we just auto download these?
+* TODO:  Test if LadderManager.exe can take relative paths.  Would make things simpler.  Make PR if not.
 
 
 
