@@ -42,7 +42,6 @@ mkdir sc2api
 mkdir LadderServer
 mkdir LadderServer\Bots
 mkdir LadderServer\Replays
-mkdir LadderServer\Maps
 ```
 
 ## Get & build the Starcraft 2 API from Blizzard
