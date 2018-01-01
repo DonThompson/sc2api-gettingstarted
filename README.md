@@ -17,6 +17,7 @@ This guide & sample code will walk you through getting everything you need to st
 * TODO:  Auto fix the maplist and VC++ directories (powershell)
 * TODO:  Test if LadderManager.exe can take relative paths in the .conf.  Would make things simpler.  Make PR if not.
 * TODO:  Get a command line build for MyBot
+* TODO:  Look into dll warnings in MyBot.
 * TODO:  Package everything up into a single powershell script someone can run from scratch
 
 # Work...
@@ -99,9 +100,9 @@ copy-item .\sc2api-gettingstarted\LadderManagerConfig\* LadderServer -recurse
 * Note:  A post-build step exists to automatically copy your bot to the LadderManager bot directory
 
 ### 2 ways to run your bot
-1. Run the application from Visual Studio, which will execute the Launcher project.  This starts starcraft, loads your bot, and starts a 1v1 game against the built in Blizzard computer opponents.
+1. Run the application from Visual Studio, which will execute the Launcher project.  This starts starcraft, loads your bot, and starts a 1v1 game against the built in Blizzard computer opponent.
   * NOTE:  The code is hardcoded to a map path at c:\sc2api\.  If you chose a different starting path, you will need to change this manually.
-2. Run LadderManager.exe, you should see * MyBot.dll as a detected bot and will be put into the rotation against other bots.
+2. Run LadderServer\LadderManager.exe, you should see * MyBot.dll as a detected bot and will be put into the rotation against other bots.
 
 
 
