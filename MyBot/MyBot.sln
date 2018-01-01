@@ -3,12 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26430.13
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyBot", "MyBot.vcxproj", "{4E37E3A4-1B84-438C-8797-12625A8DED2B}"
-EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Launcher", "Launcher.vcxproj", "{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}"
 	ProjectSection(ProjectDependencies) = postProject
 		{4E37E3A4-1B84-438C-8797-12625A8DED2B} = {4E37E3A4-1B84-438C-8797-12625A8DED2B}
 	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyBot", "MyBot.vcxproj", "{4E37E3A4-1B84-438C-8797-12625A8DED2B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
