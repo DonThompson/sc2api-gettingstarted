@@ -35,6 +35,7 @@ mkdir sc2api
 mkdir LadderServer
 mkdir LadderServer\Bots
 mkdir LadderServer\Replays
+mkdir LadderServer\Maps
 ```
 
 ## Get & build the Starcraft 2 API from Blizzard
@@ -66,7 +67,7 @@ cd ..
 ## Get the sc2ai.net Ladder Manager
 * Note:  Currently using the dllinterface branch, not master
 ```
-git clone https://github.com/Cryptyc/Sc2LadderServer/tree/DLLInterface
+git clone https://github.com/Cryptyc/Sc2LadderServer -b DLLInterface
 ```
 * Now build it in release mode
 * TODO:  cmd line this?
@@ -81,8 +82,19 @@ git clone https://github.com/Cryptyc/Sc2LadderServer/tree/DLLInterface
 ```
 copy-item .\Sc2LadderServer\x64\Release\LadderManager.exe LadderServer
 copy-item .\Sc2LadderServer\curl\bin\libcurl.dll LadderServer
+copy-item .\sc2api-gettingstarted\LadderManagerConfig\* LadderServer -recurse
 ```
 
-TODO:  need a .conf file
-TODO:  need bots
 TODO:  Probably move this down?  Might be simplest to get you going 1vai before other bots
+TODO:  need bots @ http://sc2ai.net/Season3Bots.zip
+TODO:  need maps @ https://github.com/Blizzard/s2client-proto#downloads
+TODO:  Maps path is hardcoded to c:\sc2api\
+TODO:  Test if LadderManager.exe can take relative paths.  Would make things simpler.  Make PR if not.
+
+
+
+
+# Help
+Stuck?  Something not quite working as planned?
+* Check out the sc2ai.net discord or facebook group
+* http://sc2ai.net/Joinus.php
