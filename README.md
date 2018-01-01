@@ -31,8 +31,6 @@ cd c:\sc2api
 ```
 
 ## Clone this repo
-* Open up git shell
-* Clone to your PC
 ```
 git clone https://github.com/DonThompson/sc2api-gettingstarted
 ```
