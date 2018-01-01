@@ -92,6 +92,18 @@ copy-item .\sc2api-gettingstarted\LadderManagerConfig\* LadderServer -recurse
 * TODO:  Test if LadderManager.exe can take relative paths.  Would make things simpler.  Make PR if not.
 
 
+# Build your own bot
+
+* Open sc2api-gettingstarted\MyBot\MyBot.sln in Visual Studio 2017.
+* Set your configuration to Release x64 (Build -> Configuration Manager)
+* Build -> Rebuild Solution
+* Note:  A post-build step exists to automatically copy your bot to the LadderManager bot directory
+
+## 2 ways to run your bot
+1. Run the application from Visual Studio, which will execute the Launcher project.  This starts starcraft, loads your bot, and starts a 1v1 game against the built in Blizzard computer opponents.
+  * NOTE:  The code is hardcoded to a map path at c:\sc2api\.  If you chose a different starting path, you will need to change this manually.
+2. Run LadderManager.exe, you should see * MyBot.dll as a detected bot and will be put into the rotation against other bots.
+
 
 
 # Help
