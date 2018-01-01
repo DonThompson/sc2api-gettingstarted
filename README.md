@@ -23,7 +23,7 @@ This guide & sample code will walk you through getting everything you need to st
 
 ## Choose a starting location
 * Everything we do will live under this folder.  As an example we'll use 'c:\sc2api\'.  You can change this to wherever you want it, but you will need to manually make changes as we go.  Recommended to use this path for now.
-* Open up Git Shell, we'll do all work from there
+* Open up Git Shell, we'll do all work from there (part of GitHub Desktop)
 ```
 mkdir c:\sc2api
 cd c:\sc2api
