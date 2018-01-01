@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+.vs
+/MyBot/x64
+*.user

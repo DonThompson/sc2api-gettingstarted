@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MyBot", "MyBot.vcxproj", "{4E37E3A4-1B84-438C-8797-12625A8DED2B}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Launcher", "Launcher.vcxproj", "{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E37E3A4-1B84-438C-8797-12625A8DED2B}.Debug|x64.ActiveCfg = Debug|x64
+		{4E37E3A4-1B84-438C-8797-12625A8DED2B}.Debug|x64.Build.0 = Debug|x64
+		{4E37E3A4-1B84-438C-8797-12625A8DED2B}.Release|x64.ActiveCfg = Release|x64
+		{4E37E3A4-1B84-438C-8797-12625A8DED2B}.Release|x64.Build.0 = Release|x64
+		{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}.Debug|x64.ActiveCfg = Debug|x64
+		{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}.Debug|x64.Build.0 = Debug|x64
+		{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}.Release|x64.ActiveCfg = Release|x64
+		{C70B7C2D-33D5-481C-AAC6-6E2AD65E2B0E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
