@@ -7,6 +7,7 @@ This guide & sample code will walk you through getting everything you need to st
 * You have a basic knowledge of Git (fork, clone, git shell, etc)
 * You are using Windows.
 * You are using Visual Studio 2017
+* Build tools are installed:  https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=BuildTools&rel=15
 * You have a reasonable understanding of C++ and project configuration (includes, libs mostly)
 
 ## Caveats / TODO
